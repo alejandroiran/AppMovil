@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Pruebasdos.Views.CrearCuenta">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0"  Orientation="Vertical">
+            <Label Text="Crear Cuenta" FontSize="Medium" HorizontalTextAlignment="Center"></Label> 
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
+            <Entry x:Name="entryUsuario" VerticalOptions="Center" Placeholder="Nombre Usuario" PlaceholderColor="Gray"
+                     IsEnabled="{Binding IsNotBusy}" Text=""/>
+
+             <Label x:Name="labelUsuario" Text="" IsVisible="false" HorizontalTextAlignment="Center"></Label>
+
+            <Entry x:Name="entryCorreo" VerticalOptions="Center" Placeholder="Correo Electronico" PlaceholderColor="Gray"
+                    IsPassword="False" Keyboard="Text" IsEnabled="{Binding IsNotBusy}" Text=""/>
+
+            <Label x:Name="labelCorreo" Text="" IsVisible="false" HorizontalTextAlignment="Center"></Label>
+
+            <Entry x:Name="entryContrasena" VerticalOptions="Center" Placeholder="Contrasena" PlaceholderColor="Gray"
+                    IsPassword="True" Keyboard="Text" IsEnabled="{Binding IsNotBusy}" Text=""/>
+
+            <Entry x:Name="entryConfirmacion" VerticalOptions="Center" Placeholder="Contrasena" PlaceholderColor="Gray"
+                    IsPassword="True" Keyboard="Text" IsEnabled="{Binding IsNotBusy}" Text=""/>
+            
+            <Label x:Name="labelContra" Text="" IsVisible="false" HorizontalTextAlignment="Center"></Label>
+
+            <Button VerticalOptions="Center" Text="Registrar" 
+                    IsEnabled="{Binding IsNotBusy}" Clicked="Button_Clicked"  />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

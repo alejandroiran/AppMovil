@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Pruebasdos.Views.Posts">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+            <Button Text="Borrar Mi Post" x:Name="btnEliminar"
+                    Clicked="btnEliminar_Clicked" BackgroundColor="Red"
+                    TextColor="White"></Button>
+
+             
+            <Label Text="Nuevo Post" FontSize="Medium" HorizontalTextAlignment="Center"></Label>  
+
+            <Entry x:Name="entryId" Text="0" IsReadOnly="True"/>    
+            <Image WidthRequest="100" HeightRequest="100"
+                   x:Name="imgPerfil"/>
+            
+            <Entry x:Name="entryTitulo" VerticalOptions="Center" Placeholder="Titulo"
+                     PlaceholderColor="Gray"
+                     Keyboard="Text" IsEnabled="{Binding IsNotBusy}" Text=""/>
+
+            <Editor x:Name="entryDescripcion" VerticalOptions="Center" Placeholder="Descripcion"
+                     PlaceholderColor="Gray"
+                     Keyboard="Text" IsEnabled="{Binding IsNotBusy}" Text=""/>
+
+            <Button Text="Pick a picture" 
+                    Clicked="Button_Clicked"/>
+
+                <Picker x:Name="pickerGeneros" Title="Seleccione un genero"/>
+
+             <Button Text="Enviar Post" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

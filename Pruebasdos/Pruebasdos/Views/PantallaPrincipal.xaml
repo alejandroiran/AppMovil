@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Pruebasdos.Views.PantallaPrincipal">
+        <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salir" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+    <StackLayout>
+     <StackLayout>  
+        <StackLayout>  
+             <Button x:Name="btnPerfil" Text="Mi Perfil" Clicked="btnPerfil_Clicked"></Button>  
+            <Button x:Name="btnPost" Text="Nuevo Post" Clicked="btnGet_Clicked"></Button>
+
+           
+            <Button x:Name="btnMostrar" Text="Mostrar Token" Clicked="btnMostrart_Clicked"></Button>  
+            </StackLayout>  
+        <StackLayout>
+            <Label Text="Mis Posts" FontSize="Medium" HorizontalTextAlignment="Center"></Label>
+            <Button Text="Mis Posts" Clicked="listarMisPosts"/>
+            <ListView x:Name="listViewPosts" ItemSelected="listMisPosts_ItemSelected"/>
+            </StackLayout>  
+        </StackLayout>
+    </StackLayout>
+        </ScrollView>
+</ContentPage>
